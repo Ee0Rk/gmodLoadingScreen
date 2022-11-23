@@ -5,16 +5,7 @@
 		<script type="text/javascript" src="js/thirdparty/jquery.js"></script>
 	</head>
 	<body>
-		
-		<audio loop id="audio1">
-			<source src="img/zelsnkyAudio.mp3" type="audio/mpeg">
-	    </audio>
-
-		<!-- The video -->
-		<video id="background-video" autoplay loop>
-			<source src="img/zelsnky.mp4" type="video/mp4">
-		</video>
-		 
+    
 		<div>
 				<img src='img/alpha.gif' class="squid"/>
 				<img src='img/bullchicken.gif' class="squid"/>
@@ -36,24 +27,10 @@
 				<img src='img/zeleny.jpg' width="256" height="256" hspace=165 class="squid" class="padding01"/>
 		</div>
 		
-		<style>
-			/* video background */
-			#background-video {
-			  height: 100vh;
-			  width: 100vw;
-			  object-fit: cover;
-			  position: fixed;
-			  left: 0;
-			  right: 0;
-			  top: 0;
-			  bottom: 0;
-			  z-index: -1;
-			}
-		</style>
 		<div id="background">
 			<div id="container">
 
-				#<img src='img/libtards.jpg' class="bounce"/ height="200" width="200">
+				<img src='img/libtards.jpg' class="bounce"/ height="200" width="200">
 
 				<center>
 					<br />
@@ -74,7 +51,6 @@
 			</div>
 
 		</div>
-		<element onload="script">
 		<script type="text/javascript">
 			function GameDetails( servername, serverurl, mapname, maxplayers, steamid, gamemode, volume, lang, gamemodeNice )
 			{
@@ -86,10 +62,19 @@
 
 				$(".server_info").addClass( "visible" );
 			}
+
 			// A file has begun downloading
-			function DownloadingFile( file ){}
+			function DownloadingFile( file )
+			{
+				//$("#spambox").prepend( "<span style='color:red'>" + file + "</span><br>");
+			}
+
 			// This will not be called when DownloadingFile() is
-			function SetStatusChanged( status ){}
+			function SetStatusChanged( status )
+			{
+				//$("#spambox").prepend( status + "<br>");
+			}
 		</script>
+
 	</body>
 </html>
